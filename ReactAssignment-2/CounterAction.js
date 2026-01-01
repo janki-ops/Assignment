@@ -1,5 +1,6 @@
 export const add="INCREMENT"
 export const minus="DECREMENT"
+export const reset="RESET"
 
 export const addfunc=()=>{
     return{
@@ -12,3 +13,9 @@ export const minusfunc=()=>{
         type:minus
     }
 }
+
+ export const resetfunc=()=>{
+   return{
+           type:reset
+    }
+ }
