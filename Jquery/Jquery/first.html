@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* background-color: red; */
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        .b1{
+          background-color: blue;
+        }
+        .b2{
+          background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box b1"></div>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Fade In</button>
+    <button id="btn4">Fade Out</button>
+    <button id="btn5">Fade Toggle</button>
+    <button id="btn6">Add Remove</button>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script>
+    $("#btn1").click(function(){
+        $(".box").css("display","none")
+    })
+      $("#btn2").dblclick(function(){
+        $(".box").show()
+    })
+      $("#btn3").click(function(){
+        $(".box").fadeIn(2000)
+    })
+      $("#btn4").click(function(){
+        $(".box").fadeOut(2000)
+    })
+      $("#btn5").click(function(){
+        $(".box").toggle(2000)
+    })
+    $("#btn6").click(function(){
+      $('.box').toggleClass('b2 b1')
+      // $(".box").addClass('b2').removeClass('b1')
+      // $(".box").addClass('b2')
+      // $(".box").removeClass('b1')
+    })
+  </script>
+</body>
+</html>
